@@ -1,0 +1,120 @@
+.todo-list-wraper {
+  width: 100%;
+  display: flex;
+  gap: var(--gap-large);
+}
+
+.todo-container {
+  width: 50%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.todo-card {
+  position: relative;
+  display: flex;
+  height: 64px;
+  gap: var(--gap-large);
+  padding: 8px 24px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--rounded-size);
+  margin-bottom: 8px;
+  background-color: var(--background-lighter);
+}
+.todo-card:hover .todo-delete {
+  visibility: visible;
+}
+
+.todo-text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  width: 80%;
+}
+
+.todo-checkbox-container {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  width: 20%;
+}
+
+.todo-checkbox {
+  width: 36px;
+  height: 36px;
+  accent-color: var(--secondary-color);
+}
+
+.todo-form {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 36px;
+  gap: 24px;
+}
+.todo-form h2 {
+  text-align: center;
+}
+
+.form-element {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  /* text-align: left; */
+}
+.form-element input {
+  padding: 8px 24px;
+  width: 80%;
+}
+.form-element label {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.error-space {
+  height: 12px;
+  font-size: 13px;
+  padding-top: 2px;
+  color: rgba(138, 52, 52, 0.822);
+}
+
+.todo-delete {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  visibility: collapse;
+  border-radius: 0 var(--rounded-size) 0 var(--rounded-size);
+  background-color: rgba(138, 52, 52, 0.822);
+  z-index: 5;
+  cursor: pointer;
+}
+
+dialog {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 300px;
+
+  z-index: 20;
+
+  border-radius: var(--rounded-size);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 5px 15px 3px hsla(256, 90%, 80%, 0.219);
+}
+
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(196, 196, 196, 0.158);
+
+  z-index: 10;
+}
